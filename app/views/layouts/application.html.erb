@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <div style="background: black; color:white; padding: 16px">
+      NAVBAR
+      <%= link_to "HOME", root_path, style: "color: yellow" %>
+      <%= link_to "ABOUT", about_path, style: "color: yellow" %>
+      <%= link_to "CONTACTS", contacts_path, style: "color: yellow" %>
+
+      <form action="/contacts" method="get">
+        <input type="text" name="band" placeholder="Who are you looking for?" value="<%= params[:band] %>">
+        <input type="submit">
+      </form>
+    </div>
     <%= yield %>
   </body>
 </html>
